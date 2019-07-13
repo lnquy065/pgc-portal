@@ -1,0 +1,107 @@
+.home-page {
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.home-page__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.home-page__logo-sub-title {
+    color: white;
+    font-family: 'Mali', cursive;
+    font-size: 1.5rem;
+    margin-top: .5rem;
+}
+
+
+.home-page__logo {
+    border-radius: 50%;
+    width: 100px;
+}
+
+.water-mark {
+    color: white;
+    padding-bottom: 1rem;
+}
+
+.home-page .portal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+
+.home-page .star {
+    box-shadow: 0 0px 4px rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    animation-name: grow;
+    animation-iteration-count: infinite;
+    background-color: white;
+}
+
+.home-page .star:hover {
+    box-shadow: 0 0px 20px rgb(255, 255, 255);
+    transform: scale(2);
+    transition-duration: .3s;
+}
+
+.home-page .star-small {
+    animation-duration: 10s;
+    width: 2px;
+    height: 2px;
+}
+
+.home-page .star-medium {
+    animation-duration: 100s;
+    width: 3px;
+    height: 3px;
+}
+
+.home-page .star-large {
+    animation-duration: 100s;
+    width: 5px;
+    height: 5px;
+}
+
+.home-page .star-container {
+    animation-name: goDown;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes goDown {
+    50% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes goLeft {
+    50% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes grow {
+    100% {
+
+    }
+}

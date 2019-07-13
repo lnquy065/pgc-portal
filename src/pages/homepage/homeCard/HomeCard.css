@@ -1,0 +1,38 @@
+.home-card {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    text-align: center;
+    margin: 10px;
+    font-family: 'Mali', cursive;
+    z-index: 10;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 0;
+    cursor: pointer;
+    color: black;
+}
+
+.home-card:hover {
+    box-shadow: 0 0px 20px white;
+    font-weight: bold;
+}
+
+.home-card__wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-card .home-card__icon {
+    width: 50px;
+    height: 50px;
+}
+
+.home-card .home-card__title {
+    font-size: 1rem;
+}
