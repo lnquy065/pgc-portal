@@ -17,7 +17,7 @@ const HomePage = props => {
             x = Math.floor((Math.random() * 150) + -50)
             y = Math.floor((Math.random() * 150) + -50)
             startArr.push(
-                <div className={"star " + className} style={{
+                <div key={`star${i}`} className={"star " + className} style={{
                     top: `${y}vh`,
                     left: `${x}vw`
                 }}/>
