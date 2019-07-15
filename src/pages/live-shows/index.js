@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import s from './live-shows.module.css'
+import {LiveShowService} from "../../services/liveShowsService";
 
 const liveShows = [
     {
@@ -117,6 +118,16 @@ const imageGrid = [
 ]
 
 const LiveShows = props => {
+
+    const [stLiveShows, setStLiveShows] = useState([]);
+
+    useEffect(() => {
+        LiveShowService.getAll()
+            .then(result => {
+                console.log(result)
+            })
+    }, [])
+
     return (
         <div className={s.shows}>
             {liveShows.map((liveShow, i) => (
