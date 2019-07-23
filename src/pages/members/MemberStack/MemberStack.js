@@ -168,7 +168,7 @@ const MemberStack = props => {
                     </div>}
                     {stCurrentMember.facebook &&
                     <div className="facebook">
-                        <Icon type="facebook" />
+                        <Icon type="facebook" /> Liên hệ:
                         <a href={stCurrentMember.facebook} target={"_blank"}>
                             &nbsp;Facebook
                         </a>
