@@ -1,0 +1,61 @@
+.member
+
+  .ant-badge
+
+    .ant-scroll-number-custom-component
+      top: 24px
+      right: 24px
+      color: white
+      background-color: black
+      padding: 3px
+      border-radius: 5px
+      border: 1px solid
+      font-weight: bold
+
+
+  &__avatar
+    width: 6em
+    height: 6em
+    background-size: cover
+    background-repeat: no-repeat
+    border-radius: 50%
+    cursor: pointer
+    box-shadow: 0 0 3px 1px white
+    margin: 1em
+    transition: .5s box-shadow
+    position: relative
+
+    &:hover
+      box-shadow: 0 0 7px 1px white
+
+      &:before
+        transition-duration: .5s
+        content: "• • •"
+        font-size: 1.5rem
+        width: 100%
+        height: 100%
+        background-color: #0000004f
+        display: flex
+        border-radius: 50%
+        justify-content: center
+        align-items: center
+        color: white
+        position: absolute
+
+
+.member-tooltips
+
+  .ant-tooltip-content
+
+    .ant-tooltip-arrow
+      border-bottom-color: white
+      border-right-color: white
+
+    .ant-tooltip-inner
+      background-color: white
+      color: black
+
+      .member-tooltips__nickname
+        color: #333333
+        font-size: .8em
+        display: block

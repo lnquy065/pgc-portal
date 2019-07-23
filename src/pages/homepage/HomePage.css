@@ -35,73 +35,10 @@
     padding-bottom: 1rem;
 }
 
-.home-page .portal-container {
+.portal-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     max-width: 500px;
-}
-
-.home-page .star {
-    box-shadow: 0 0px 4px rgb(255, 255, 255);
-    border-radius: 50%;
-    position: absolute;
-    animation-name: grow;
-    animation-iteration-count: infinite;
-    background-color: white;
-}
-
-.home-page .star:hover {
-    box-shadow: 0 0px 20px rgb(255, 255, 255);
-    transform: scale(2);
-    transition-duration: .3s;
-}
-
-.home-page .star-small {
-    animation-duration: 10s;
-    width: 2px;
-    height: 2px;
-}
-
-.home-page .star-medium {
-    animation-duration: 100s;
-    width: 3px;
-    height: 3px;
-}
-
-.home-page .star-large {
-    animation-duration: 100s;
-    width: 5px;
-    height: 5px;
-}
-
-.home-page .star-container {
-    animation-name: goDown;
-    animation-duration: 50s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-@keyframes goDown {
-    50% {
-        transform: translateY(100px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-@keyframes goLeft {
-    50% {
-        transform: translateX(100px);
-    }
-    100% {
-        transform: translateX(0px);
-    }
-}
-
-@keyframes grow {
-    100% {
-
-    }
 }

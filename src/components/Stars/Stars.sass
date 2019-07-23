@@ -1,0 +1,65 @@
+
+
+
+.star
+  box-shadow: 0 0 4px rgb(255, 255, 255)
+  border-radius: 50%
+  position: absolute
+  animation-name: grow
+  animation-iteration-count: infinite
+  background-color: white
+
+
+.star:hover
+  box-shadow: 0 0 20px rgb(255, 255, 255)
+  transform: scale(2)
+  transition-duration: .3s
+
+
+.star-small
+  animation-duration: 10s
+  width: 2px
+  height: 2px
+
+
+.star-medium
+  animation-duration: 100s
+  width: 3px
+  height: 3px
+
+
+.star-large
+  animation-duration: 100s
+  width: 5px
+  height: 5px
+
+
+.star-container
+  animation-name: goDown
+  animation-duration: 50s
+  animation-iteration-count: infinite
+  animation-timing-function: linear
+  position: fixed
+  top: 0
+  left: 0
+
+
+@keyframes goDown
+  50%
+    transform: translateY(100px)
+
+  100%
+    transform: translateY(0px)
+
+
+@keyframes goLeft
+  50%
+    transform: translateX(100px)
+
+  100%
+    transform: translateX(0px)
+
+
+
+
+

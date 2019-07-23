@@ -45,7 +45,9 @@ const HomePage = props => {
                 <HomeCard title="Đăng ký bài"
                           icon="/assets/icons/001-clipboard.svg"
                             url="https://docs.google.com/spreadsheets/d/1A0delGWrPk6BJQaVTBqMkc7q0LErH4ohfs-wXPQVnpc/edit?usp=sharing"/>
-                <HomeCard title="Thành viên" icon="/assets/icons/004-team.svg"/>
+                <HomeCard title="Thành viên" icon="/assets/icons/004-team.svg"
+                            url="/members"
+                />
                 <HomeCard title="Quỹ clb" icon="/assets/icons/002-piggy-bank.svg"/>
                 <HomeCard title="Thông báo"  icon="/assets/icons/003-push-pin.svg"/>
             </div>

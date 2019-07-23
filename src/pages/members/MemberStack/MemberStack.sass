@@ -1,0 +1,161 @@
+.member-stack
+
+  &__title
+    color: white
+    font-size: 2.2rem
+    text-align: center
+    text-shadow: 0 0 2px white
+    margin: 1rem 0
+
+
+
+  .course-row
+    margin-bottom: 1rem
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 500px
+
+    &--chairman
+      margin: 40px 0
+
+    &__title
+      font-size: 1rem
+      color: white
+      font-weight: 500
+      text-align: center
+      text-shadow: 0 0 2px white
+
+      &--chairman
+        font-weight: bold
+        color: yellow
+        text-transform: uppercase
+
+    &__title-hr
+      border: 0
+      height: 1px
+      width: 200px
+      background-image: linear-gradient(to right, #1B2735, #f0f0f0, #1B2735)
+      background-image: -webkit-linear-gradient(to right, #1B2735, #f0f0f0, #1B2735)
+      background-image: -moz-linear-gradient(to right, #1B2735, #f0f0f0, #1B2735)
+      background-image: -ms-linear-gradient(to right, #1B2735, #f0f0f0, #1B2735)
+      background-image: -o-linear-gradient(to right, #1B2735, #f0f0f0, #1B2735)
+
+    &__member-container
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+
+.ant-modal-mask
+  background: #00000012 !important
+
+.member-detail-modal
+
+  .ant-modal
+    width: fit-content !important
+
+    .ant-modal-header
+      display: none
+
+    .ant-modal-footer
+      display: none
+
+    .ant-modal-body
+      width: 400px
+      padding: 0
+      display: flex
+      flex-direction: column
+      position: relative
+
+      .member-cover-image
+        width: 100%
+        height: 150px
+        background-size: cover
+        background-position: center
+        filter: blur(1px)
+
+        &--loader
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 150px
+
+      .member-detail__avatar
+        width: 120px
+        height: 120px
+        border: 2px solid #b3b3b3
+        background-repeat: no-repeat
+        background-size: cover
+        border-radius: 50%
+        z-index: 1
+
+        &--loader
+          width: 120px
+          height: 120px
+          position: absolute
+
+
+      .member-detail__avatar-wrapper
+        margin-top: -60px
+        z-index: 1
+        margin-left: 20px
+        display: flex
+        position: relative
+
+        .member-detail__name
+          font-size: 1.2rem
+          align-self: flex-end
+          padding: 20px 10px
+          font-weight: bold
+
+      .member-detail__info-wrapper
+        padding: 20px
+
+        .comment
+          padding-top: 5px
+          font-style: italic
+
+          .load-more
+            padding: 10px 0 5px 0
+            text-align: center
+            cursor: pointer
+
+            &:hover
+              color: #039be5
+
+          &--empty
+            padding-top: 5px
+            font-style: italic
+            text-align: center
+
+      .member-detail__btn-wrapper
+        margin-top: auto
+        display: flex
+        border-top: 1px solid #c7c7c7
+
+
+      .btn-footer
+          flex: 1
+          text-align: center
+          padding: 10px
+          cursor: pointer
+
+          &:first-child
+            border-right: 1px solid #c7c7c7
+
+          &:hover
+            background-color: rgba(128, 128, 128, 0.14)
+
+
+
+    .ant-modal-close-icon
+      box-shadow: 0 0 2px 0 white
+      border-radius: 50%
+      background-color: white
+      padding: 4px
+
+      &:hover
+        box-shadow: 0 0 4px 0 white
+
+
