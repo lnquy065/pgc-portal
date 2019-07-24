@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './HomePage.css'
 import HomeCard from "./homeCard/HomeCard";
+import {Icon} from "antd";
 
 const STAR_CLASS_NAME = {
     SMALL: 'star-small',
@@ -35,24 +36,47 @@ const HomePage = props => {
             </div>
 
             <div className="home-page__header">
-                    <img src="/assets/icons/pgc-logo.jpg" className="home-page__logo"/>
-                {/*<span className="home-page__logo-sub-title">*/}
-                    {/*CỔNG THÔNG TIN PGC*/}
-                {/*</span>*/}
+                <img src="/assets/icons/pgc-logo-2.png" className="home-page__logo"/>
+                <span className="home-page__logo-sub-title text-glow1">
+                    <span style={{fontSize: '.8em'}}>
+                    Câu lạc bộ Guitar PGC
+                    </span>
+                    <br/>
+                    PTIT GUITAR CLUB
+                </span>
             </div>
 
-            <div className="portal-container">
-                <HomeCard title="Đăng ký bài"
-                          icon="/assets/icons/001-clipboard.svg"
-                            url="https://docs.google.com/spreadsheets/d/1A0delGWrPk6BJQaVTBqMkc7q0LErH4ohfs-wXPQVnpc/edit?usp=sharing"/>
-                <HomeCard title="Thành viên" icon="/assets/icons/004-team.svg"
-                            url="/members"
-                />
-                <HomeCard title="Quỹ clb" icon="/assets/icons/002-piggy-bank.svg"/>
-                <HomeCard title="Thông báo"  icon="/assets/icons/003-push-pin.svg"/>
+            <div>
+                <div className="portal-title text-glow1">
+                    Truy cập nhanh
+                </div>
+                <hr className="hr-style1"/>
+                <div className="portal-container">
+                    {/*<HomeCard title="Đăng ký bài"*/}
+                    {/*          icon="/assets/icons/001-clipboard.svg"*/}
+                    {/*          redirect*/}
+                    {/*            url="https://docs.google.com/spreadsheets/d/1A0delGWrPk6BJQaVTBqMkc7q0LErH4ohfs-wXPQVnpc/edit?usp=sharing"/>*/}
+                    <HomeCard title="Thành viên" icon="/assets/icons/004-team.svg"
+                                url="/members"
+                    />
+                    <HomeCard title="Live Shows" icon="/assets/icons/live-shows.svg"
+                                url="/live-shows"
+                    />
+                    {/*<HomeCard title="Quỹ clb" icon="/assets/icons/002-piggy-bank.svg"/>*/}
+                    {/*<HomeCard title="Thông báo"  icon="/assets/icons/003-push-pin.svg"/>*/}
+                </div>
             </div>
+
 
             <div className="water-mark">
+                <div className="icon-container">
+                    <Icon type="facebook" onClick={() => {
+                        window.open('https://www.facebook.com/PTITGC', '_blank')
+                    }}/>
+                    <Icon type="youtube" onClick={() => {
+                        window.open('https://www.youtube.com/user/PGCHCM', '_blank')
+                    }}/>
+                </div>
                 @ 2019 - PTIT Guitar Club
             </div>
         </div>

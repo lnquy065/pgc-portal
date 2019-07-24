@@ -73,6 +73,15 @@ const update = (id, requestBody) => {
     })
 }
 
+const get = (id) => {
+    return new Promise( resolve => {
+        db.collection(COLLECTION_NAME)
+            .doc(id)
+            .get()
+            .then(resolve)
+    })
+}
+
 
 export const MemberService = {
     getAll,
@@ -82,5 +91,6 @@ export const MemberService = {
     getAllOrderByChairmanDESC,
     getAllOrderByChairmanASC,
     remove,
-    update
+    update,
+    get
 }

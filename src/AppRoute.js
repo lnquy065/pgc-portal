@@ -6,6 +6,7 @@ import HomePage from "./pages/homepage/HomePage";
 import LiveShows from './pages/live-shows'
 import Members from "./pages/members/Members";
 import MemberUploader from "./pages/members/upload/MemberUploader";
+import MembersStory from "./pages/members-story/MembersStory";
 
 const AppRoute = props => {
     return (
@@ -15,6 +16,7 @@ const AppRoute = props => {
                 <Route exact path={NavPath.home} component={HomePage}/>
                 <Route exact path={NavPath.liveShows} component={LiveShows} />
                 <Route exact path={NavPath.members} component={Members} />
+                <Route exact path={NavPath.membersStory} component={MembersStory} />
                 <Route exact path={NavPath.membersUpload} component={MemberUploader} />
             </Switch>
         </BrowserRouter>

@@ -5,7 +5,7 @@ import {MemberService} from "../../../services/membersService";
 import {StorageService} from "../../../services/storageService";
 import {Button, Icon, Input, Modal, Popconfirm, Table, message, Card} from "antd";
 import {Link} from "react-router-dom";
-const { Search } = Input;
+const { Search, TextArea } = Input;
 
 const MemberUploader = props => {
     const [stMembers, setStMembers] = useState([]);
@@ -57,7 +57,9 @@ const MemberUploader = props => {
             image: '',
             chairman: '',
             facebook: '',
-            class: ''
+            class: '',
+            story: '',
+            storyDate: ''
         })
     }
 
@@ -151,6 +153,10 @@ const MemberUploader = props => {
                     <Input name="chairman" value={stCurrentMember.chairman} placeholder="Đời chủ nhiệm"  onChange={handleFormChange}/>
                     <br/>
                     <Input name="facebook" value={stCurrentMember.facebook} placeholder="Facebook"  onChange={handleFormChange}/>
+                    <br/>
+                    <TextArea name="story" value={stCurrentMember.story} placeholder="Cảm nhận"  onChange={handleFormChange}/>
+                    <br/>
+                    <Input name="storyDate" value={stCurrentMember.storyDate} placeholder="Ngày viết bài (vd 01/12/2001)"  onChange={handleFormChange}/>
                     <br/>
                     <input type="file" onChange={handleImageChange}/>
                     <br/>

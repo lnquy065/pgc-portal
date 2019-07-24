@@ -19,7 +19,7 @@ const Members = props => {
                 const memberList = docs.map(doc => {
                     return {
                         ...doc.data(),
-                        key: doc.key
+                        key: doc.id
                     }
                 })
                 setStMembers(memberList)

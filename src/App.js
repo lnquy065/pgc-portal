@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './_style.sass'
 import AppRoute from "./AppRoute";
 import {Layout} from "antd";
 const { Header, Footer, Sider, Content } = Layout;

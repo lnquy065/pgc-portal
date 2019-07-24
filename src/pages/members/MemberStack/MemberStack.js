@@ -13,13 +13,6 @@ const MemberStack = props => {
     const [stCurrentMember, setStCurrentMember] = useState(null);
     const [stIsModalOpen, setStIsModalOpen] = useState(false);
 
-    const comment = "Ngày 21-7, Cơ quan CSĐT Công an quận 2 TP.HCM cho biết đã khởi tố vụ án, khởi tố bị can, bắt tạm giam Huỳnh Thanh Phương (23 tuổi, ngụ quận 2) để điều tra về hành vi cướp tài sản.\n" +
-        "\n" +
-        "Trước đó, lúc 0h30 ngày 15-7, Phương lái xe máy rảo đi \"ăn hàng\" thì phát hiện cửa lầu 1 tại một căn nhà trên đường Nguyễn Thị Định (phường Bình Trưng Tây, quận 2) đang mở.\n" +
-        "\n" +
-        "Thấy vậy, Phương dừng xe, leo tường đột nhập vào nhà thì thấy nữ chủ nhà đang ngủ. Sau đó, Phương tìm kiếm tài sản và lấy một iPad đem xuống tầng trệt để, rồi tiếp tục lục tìm tài sản khác.\n" +
-        "\n"
-
     useEffect(() => {
         const courseSet = new Set()
         for (const member of props.members) {
@@ -174,19 +167,23 @@ const MemberStack = props => {
                         </a>
                     </div>}
                     <hr/>
-                    {stCurrentMember.comment && <div className="comment">
-                        "{comment.substr(0, COMMENT_LIMIT)}
+                    {stCurrentMember.story && <div className="comment">
+                        "{stCurrentMember.story.substr(0, COMMENT_LIMIT)}
 
                         {/*SHOW ELLIPSIS*/}
-                        {comment.length > COMMENT_LIMIT && "..."}"
+                        {stCurrentMember.story.length > COMMENT_LIMIT && "..."}"
 
                         {/*SHOW LOAD MORE*/}
-                        {comment.length > COMMENT_LIMIT &&
-                        <div className="load-more">Xem thêm</div>
+                        {stCurrentMember.story.length > COMMENT_LIMIT &&
+                        <div className="load-more"  onClick={() =>
+                            window.open('/members/story/' + stCurrentMember.key, 'blank')
+                        }>
+                            Xem thêm
+                        </div>
                         }
                     </div>}
 
-                    {!stCurrentMember.comment && <div className="comment--empty">
+                    {!stCurrentMember.story && <div className="comment--empty">
                         {stCurrentMember.name} vẫn chưa có cảm nhận nào về PGC <br/>
                         Nếu bạn là {stCurrentMember.name} hãy chọn "Gửi cảm nhận" bên dưới để gửi ngay nhé!
                     </div>}

@@ -19,20 +19,48 @@
 
 .home-page__logo-sub-title {
     color: white;
-    font-family: 'Mali', cursive;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     margin-top: .5rem;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 
 .home-page__logo {
     border-radius: 50%;
     width: 100px;
+    margin-top: 2rem;
 }
 
 .water-mark {
     color: white;
     padding-bottom: 1rem;
+}
+
+.water-mark .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.water-mark .icon-container i {
+    padding: 5px;
+    font-size: 1.5rem;
+    flex: 1;
+    cursor: pointer;
+}
+
+.water-mark .icon-container i:first-child {
+    border-right: 1px solid white;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+.water-mark .icon-container i:first-child:hover {
+    color: #2f54eb;
+}
+.water-mark .icon-container i:last-child:hover {
+    color: red;
 }
 
 .portal-container {
@@ -41,4 +69,11 @@
     align-items: center;
     flex-wrap: wrap;
     max-width: 500px;
+}
+
+.portal-title {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
 }
