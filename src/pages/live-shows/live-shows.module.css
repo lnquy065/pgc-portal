@@ -50,7 +50,19 @@
     line-height: 2rem;
     /* font-weight: 500; */
     font-weight: bold;
+    /*margin-bottom: 2rem;*/
+    color: black;
+    text-shadow: 0 0 4px white;
+}
+.shows .show .info .date {
+    display: block !important;
+    font-size: 1rem !important;
+    line-height: 2rem;
+    /* font-weight: 500; */
+    font-weight: bold;
     margin-bottom: 2rem;
+    color: black;
+
 }
 .shows .show .info .description {
     /* font-size: 1rem; */

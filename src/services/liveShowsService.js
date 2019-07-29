@@ -12,7 +12,19 @@ const getAll = () => {
     })
 }
 
+const getAllOrderByTimestampDESC = () => {
+    return new Promise( (resolve, reject) => {
+        db.collection(COLLECTION_NAME)
+            .orderBy('timestamp', 'desc')
+            .get()
+            .then( result => {
+                resolve(result.docs)
+            })
+    })
+}
+
 
 export const LiveShowService = {
-    getAll
+    getAll,
+    getAllOrderByTimestampDESC
 }

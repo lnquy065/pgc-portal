@@ -122,19 +122,31 @@ const LiveShows = props => {
     const [stLiveShows, setStLiveShows] = useState([]);
 
     useEffect(() => {
-        LiveShowService.getAll()
+        LiveShowService.getAllOrderByTimestampDESC()
             .then(result => {
-                console.log(result)
+                const liveshows = result.map(doc => {
+                    const data = doc.data()
+                    return {
+                        id: doc.id,
+                        title: data.name,
+                        description: data.description,
+                        date: data.date,
+                        cover: data.background,
+                        pictures: [...data.gallery],
+                    }
+                })
+                setStLiveShows(liveshows)
             })
     }, [])
 
     return (
         <div className={s.shows}>
-            {liveShows.map((liveShow, i) => (
+            {stLiveShows.map((liveShow, i) => (
                 <div key={`live-show-${liveShow.id || i}`} className={s.show}>
-                    <img className={s.background} src={require(__dirname + '/' + liveShow.cover)} alt="" />
+                    <img className={s.background} src={liveShow.cover} alt="" />
                     <div className={s.info}>
                         <span className={s.title}>{liveShow.title}</span>
+                        <span className={s.date}>{liveShow.date}</span>
                         <span className={s.description}>{liveShow.description}</span>
                     </div>
                     <div className={s.pictures}>
@@ -142,10 +154,10 @@ const LiveShows = props => {
                             <div
                                 key={`live-show-picture-${j}`}
                                 className={s.picture}
-                                style={{backgroundImage: `url(${require(__dirname + '/' + liveShowPicture)})`}}
+                                style={{backgroundImage: `url(${liveShowPicture})`}}
                                 data-column={imageGrid[j].column}
                                 data-row={imageGrid[j].row}
-                            ></div>
+                            />
                         ))}
                     </div>
                 </div>
