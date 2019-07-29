@@ -133,6 +133,7 @@ const LiveShows = props => {
                         date: data.date,
                         cover: data.background,
                         pictures: [...data.gallery],
+                        playlist: data.playlist
                     }
                 })
                 setStLiveShows(liveshows)
@@ -147,7 +148,10 @@ const LiveShows = props => {
                     <div className={s.info}>
                         <span className={s.title}>{liveShow.title}</span>
                         <span className={s.date}>{liveShow.date}</span>
-                        <span className={s.description}>{liveShow.description}</span>
+                        {liveShow.playlist && <iframe width="560" height="315" src={`https://www.youtube.com/embed/videoeries?list=${liveShow.playlist}`} frameBorder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen/>}
+                        {/*<span className={s.description}>{liveShow.description}</span>*/}
                     </div>
                     <div className={s.pictures}>
                         {liveShow.pictures.slice(0, imageGrid.length).map((liveShowPicture, j) => (
