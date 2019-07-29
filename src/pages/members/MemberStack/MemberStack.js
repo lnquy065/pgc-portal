@@ -78,7 +78,11 @@ const MemberStack = props => {
                         <div className="course-row__title" style={{
                             fontSize: '1em'
                         }}>
-                            Khóa {course}
+                            { isNaN(course) ?
+                                course
+                              :
+                                "Khóa " + course
+                            }
                         </div>
                         <div className="course-row__title-hr"/>
                         {/*MEMBER*/}
@@ -145,11 +149,12 @@ const MemberStack = props => {
                 </div>
                 <div className="member-detail__info-wrapper">
                     <div className="course">
-                        <Icon type="star" /> Khóa: {stCurrentMember.course}
+                        <Icon type="star" /> { isNaN(stCurrentMember.course) ? "":"Khóa: "} {stCurrentMember.course}
                     </div>
                     {stCurrentMember.class &&
                     <div className="class">
-                        <Icon type="book" /> Lớp: {stCurrentMember.class}
+                        <Icon type="book" /> { isNaN(stCurrentMember.course) ? "Trường: ":"Lớp: "}
+                        {stCurrentMember.class}
                     </div>}
                     {stCurrentMember.chairman &&
                     <div className="nick-name">
