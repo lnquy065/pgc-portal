@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import s from './live-shows.module.css'
 import {LiveShowService} from "../../services/liveShowsService";
+import {Icon} from "antd";
 
 const liveShows = [
     {
@@ -133,7 +134,8 @@ const LiveShows = props => {
                         date: data.date,
                         cover: data.background,
                         pictures: [...data.gallery],
-                        playlist: data.playlist
+                        playlist: data.playlist,
+                        place: data.place
                     }
                 })
                 setStLiveShows(liveshows)
@@ -147,8 +149,18 @@ const LiveShows = props => {
                     <img className={s.background} src={liveShow.cover} alt="" />
                     <div className={s.info}>
                         <span className={s.title}>{liveShow.title}</span>
-                        <span className={s.date}>{liveShow.date}</span>
-                        {liveShow.playlist && <iframe width="560" height="315" src={`https://www.youtube.com/embed/videoeries?list=${liveShow.playlist}`} frameBorder="0"
+                        <span className={s.guitar_show}>Guitar Show</span>
+                        <div className={s.place}>
+                            <span className={s.date}>
+                                <Icon type="clock-circle" />
+                                {' '}{liveShow.date}
+                                {'  |  '}
+                                <Icon type="environment" />
+                                {' '}{liveShow.place}
+                            </span>
+                        </div>
+                        {liveShow.playlist &&
+                        <iframe className={s.youtube} height='315px' src={`https://www.youtube.com/embed/videoeries?list=${liveShow.playlist}`} frameBorder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen/>}
                         {/*<span className={s.description}>{liveShow.description}</span>*/}

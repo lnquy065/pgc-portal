@@ -3,12 +3,14 @@
 }
 .shows .show {
     width: 100%;
-    height: calc(100vh + 140px + 32px + 1rem * 4 + 2rem * 3);
+    /*height: calc(100vh + 140px + 32px + 1rem * 4 + 2rem * 3);*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     position: relative;
+    min-height: 100vh;
+    height: fit-content;
 }
 .shows .show .background {
     top: 0;
@@ -40,9 +42,16 @@
     align-items: flex-start;
     justify-content: center;
     z-index: 2;
+    min-height: 100vh;
 }
 .shows .show .info {
     text-shadow: 0 0 5px #eee;
+}
+
+.shows .show .info .guitar_show {
+    margin-top: 3px;
+    border-top: 1px solid;
+    font-size: 1rem;
 }
 .shows .show .info .title {
     display: block !important;
@@ -56,14 +65,20 @@
 }
 .shows .show .info .date {
     display: block !important;
-    font-size: 1rem !important;
-    line-height: 2rem;
-    /* font-weight: 500; */
-    font-weight: bold;
-    margin-bottom: 2rem;
+    font-size: .9rem !important;
+    line-height: 1.5rem;
+     /*font-weight: 500;*/
+    /*font-weight: bold;*/
     color: black;
+    text-shadow: 0 0 5px #eee;
 
 }
+
+.shows .show .info .place {
+    margin: 1em 0 2rem 0;
+}
+
+
 .shows .show .info .description {
     /* font-size: 1rem; */
     font-size: 1.2rem;
@@ -117,6 +132,11 @@
     grid-column: 1 / 3;
     grid-row: 4 / 6;
     padding-top: calc(((100vh - 2rem * 2 - 1rem * 4) / 5) * 2 + 1rem);
+}
+
+.shows .show .youtube {
+    width: 100%;
+    max-width: 560px;
 }
 
 @media only screen and (min-width: 768px) {
