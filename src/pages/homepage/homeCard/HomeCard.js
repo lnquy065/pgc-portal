@@ -6,15 +6,17 @@ import {Link} from "react-router-dom";
 const HomeCard = props => {
     return (
         <div>
+            <Link to={props.url} target="_blank">
+
                 <div className="home-card">
-                    <Link to={props.url} target="_blank">
 
                     <div className="home-card__wrapper">
                         <img src={props.icon} className="home-card__icon"/>
                     </div>
-                    </Link>
 
                 </div>
+            </Link>
+
             <span className="home-card__title">
                 {props.title}
             </span>

@@ -6,7 +6,7 @@ import {MemberAvatarLoader} from "../MemberStack";
 
 const Member = props => {
 
-    const {key, name, course, image, nickName, chairman} = props.member
+    const {key, name, course, image, nickName, chairman, story} = props.member
     const {member, ...other} = props
     return (
         <div className="member" {...other}>
@@ -28,7 +28,13 @@ const Member = props => {
                     <div  className="member__avatar"
                     style={{
                         backgroundImage: `url(${image})`
-                    }}/>
+                    }}>
+                    {story &&
+                    <span className={"story-icon"}>
+                       <Icon type="fire" theme="filled" />
+                    </span>}
+                    </div>
+
                     </Tooltip>
                 </Badge>
         </div>
@@ -42,7 +48,8 @@ Member.propTypes = {
         nickName: PropTypes.string,
         image: PropTypes.string,
         course: PropTypes.string,
-        chairman: PropTypes.number
+        chairman: PropTypes.number,
+        story: PropTypes.string
     })
 };
 
